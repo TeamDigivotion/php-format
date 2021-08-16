@@ -1,10 +1,4 @@
 <?php
-/**
- * @author Richard Fussenegger <fleshgrinder@users.noreply.github.com>
- * @copyright 2017 Richard Fussenegger
- * @license http://unlicense.org/ Unlicense
- */
-
 declare(strict_types = 1);
 
 namespace Fleshgrinder\Core;
@@ -244,7 +238,7 @@ final class Formatter {
 		$result = '';
 
 		for ($i = 0, $bytes = \strlen($string); $i < $bytes; ++$i) {
-			$ord = \ord($string{$i});
+			$ord = \ord($string[$i]);
 
 			if (0 <= $ord && $ord <= 31) {
 				$result .= $cc($ord);
@@ -253,7 +247,7 @@ final class Formatter {
 				$result .= $del;
 			}
 			else {
-				$result .= $string{$i};
+				$result .= $string[$i];
 			}
 		}
 
