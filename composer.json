@@ -10,7 +10,7 @@
 		}
 	],
 	"require": {
-		"php": "^7.0",
+		"php": "^7.0 || ^8.0"
 		"ext-pcre": "*",
 		"fleshgrinder/core": "^1.0",
 		"fleshgrinder/value": "^1.0"
